@@ -1,0 +1,192 @@
+body{
+	background-color: #F4B558;
+	background-size: contain;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.modal-content {
+    background-color: #e9ecef;
+}
+.input-xs, .dropdown-toggle,.input-xs:focus{
+background-color: rgba(255, 255, 255, 0.35);
+}
+
+
+
+  .fa-plus-circle{
+	padding-left: 1.3rem;
+  }
+
+  .form-group {
+    margin-left: 1.8rem;
+}
+
+input[type="file"],#imagen {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	}
+
+/*	#subirImagen{{
+		font-size: 2.5rem;
+		font-weight: 600;
+		color:gray;
+		display: inline-block;
+		transition: all .5s;
+		cursor: pointer;
+		padding: 15px 40px !important;
+		
+		text-align: left;
+	
+	line-height: 70px;
+	border-radius: 500rem;
+    height: 5rem;
+	width: 5rem;
+	background-image: url("img/perro.jpg");
+	background-size: contain;
+	background-attachment: cover;
+	background-repeat: no-repeat;
+	padding-left: 3rem !important;
+		}*/
+		
+		#subirImagen{
+			display: inline-block;
+			padding: 15px 40px !important;
+			padding-left: 3rem;
+			text-align: left;
+			font-size: 2.5rem;
+			height: 5rem;
+			width: 5rem;
+			color: gray;
+			font-weight: bold;
+			background-color: chocolate;
+			background-image: url("img/perro.jpg");
+			
+			background-size: 100% 100%;
+			background-attachment: cover;
+			background-repeat: no-repeat;
+			cursor: pointer;
+			border-radius: 100%;
+			transition: 0.3s all ease;
+			padding-left: 3rem !important;
+		}
+
+		#subirImagen:hover{
+			background-color: coral;
+		}
+@media only screen and (max-width: 1500px) and (min-width: 601px){
+	
+h1 {
+	padding-top: 20%;
+}
+
+	#clock{
+		color:white;
+		text-align:center;
+		vertical-align: middle;
+		font-family: 'Fjalla One', cursive;
+		font-size: 2rem;
+	}
+	
+	.txt-principal{
+		text-align:center;
+		vertical-align: middle;
+		font-family: 'Fjalla One', cursive;
+		font-size: 3rem;
+		padding-left: 1.5rem;
+		padding-top: 18rem;
+		color: rgb(248, 97, 27);
+	}
+	.container {
+		width: auto;
+		display: flex;
+		margin-top: 2rem;
+		flex-direction: column;
+	}
+	
+	.btnRegister{
+		margin: 10px auto;
+		border: none;
+		padding: 10px 44px;
+		font-size: 36px;
+		position: relative;
+		color: white;
+		background-color: gray;
+		border-radius:100%;
+			mix-blend-mode: difference;
+	}
+	
+	
+		
+	
+	.modal-content{
+		font-size: 0.8rem;
+	}
+	
+	.alert-success,.alert-danger{
+		margin-left: 36%;
+	}
+
+	
+}
+
+@media only screen and (max-width: 600px) {
+	
+	.txt-principal{
+		text-align:center;
+		vertical-align: middle;
+		font-family: 'Fjalla One', cursive;
+		margin-top: 9rem;
+		font-size: 1.4rem;
+	} 
+
+	#clock{
+		
+		text-align:center;
+		vertical-align: middle;
+		font-family: 'Fjalla One', cursive;
+		font-size: 1rem;
+	}
+
+	.container {
+		width: auto;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.btnRegister{
+		margin: 20px auto;
+		border: none;
+		padding: 10px 44px;
+		font-size: 36px;
+		position: relative;
+		color: white;
+		background-color: gray;
+		border-radius:100%;
+		mix-blend-mode: difference;
+	}
+		
+	.modal-content{
+		font-size: 0.8rem;
+	}
+	
+	.alert-success,.alert-danger{
+		margin-left: 36%;
+	}
+	.form-group {
+		margin-left: 1.8rem;
+		width: 80%;
+	}
+	.bootstrap-select[class*=col-] .dropdown-toggle {
+		width: 16rem;
+	}
+}
+
+
+
+
+

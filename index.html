@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  
+
+<div class="row" >
+  <div class="col-sm-7  col-xs-12">
+    <img src="img/header.png" alt="logo" id="logo" style="position: absolute; width: 100%; padding: 2rem;">
+    <div class="img-holder"></div>
+    <canvas id="world" style="position: absolute; z-index: -1;"></canvas>
+    <div class="container-fluid justify-content-sm-center">
+      <h1 class="txt-principal text-center">Estamos creando un espacio, para los que amas. </h1>
+      
+      <div class="row justify-content-sm-center" id="husky">
+        <div class="text-center col-sm-4 ">
+          <img src="img/husky.gif" class="img-fluid" alt="Responsive-image">
+        </div>
+      </div>
+    
+      <div id="clock" ></div>
+      <script src="count.js"></script>
+    </div>  
+  </div>
+
+  <div class="col-sm-5  col-xs-12">
+    
+    <div class="container" id="container">
+      <div type="" class="btnRegister " data-toggle="modal" data-target="#ModalCenter">
+        <span class="btn-text">Regístrate</span></div>
+    </div>
+            
+  <div class="modal-body">
+      <form method="POST" enctype="multipart/form-data" name="miformulario" id="miformulario" class="form-horizontal " >
+            <div class="form-group" style="text-align: center;">
+            <!--label for="imagen"><i class="fa fa-plus-circle"></i></label>
+            <input class="btn  btn-secondary btn-circle btn-circle-xl m-1 " name="imagen" id="imagen" onclick="cargarImage()" type="file" style=" font-size: 0.5rem; padding: 0rem !important;" -->
+            <input type="file" id="file"  name="image" accept="image/*">
+            <div id="subirImagen" >
+              <span><i class="fa fa-plus-circle"></i></span>
+            </div>
+            
+            </div>
+            <div class="col-xs-10 input-group">
+              <div class="form-group ">
+                <label class="col-xs-2 control-label">Nombre del dueño:</label>
+                <div class="col-xs-10">
+                  <input type="text" id="nomD" name="nomD"  class="form-control input-xs" required>
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <label class="col-xs-2 control-label">Correo:</label>
+                <div class="col-xs-10">
+                  <input type="email" id="email" name="email"   class="form-control input-xs" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-10 input-group">
+              <div class="form-group">
+                <label class="col-xs-2 control-label">Celular:</label>
+                <div class="col-xs-10">
+                  <input type="text" id="cel" name="cel"  class="form-control input-xs" required>
+                </div>
+              </div>
+              
+              <div class="form-group">
+              <label class="col-xs-2 control-label">Nombre del animal:</label>
+              <div class="col-xs-10">
+                <input type="text" id="nomA" name="nomA"  class="form-control input-xs" required>
+              </div>
+              </div>
+            </div>
+
+            <label class="col-xs-2 control-label form-group">Tipo de animal:</label>
+            <div class="col-xs-10 input-group">
+                <div class="form-group">
+                
+                <select class="mdb-select md-form selectpicker col-xs-12 " name="tipo" id="tipo" required>
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option value="1">Domestico</option>
+                  <option value="2">Granja</option>
+                </select>
+              </div>
+              <div class="form-group">
+               <select class="mdb-select md-form selectpicker col-xs-12" name="tipoA" id="tipoA" required>
+                <option value="" disabled selected> Que animal es?</option>
+                <option value="Perro">Perro</option> 
+                <option value="Gato" >Gato</option>
+                <option value="Hamster" >Hamster</option>
+                <option value="Aves" >Ave</option>
+                <option value="Otros" >Otros</option>
+                </select>
+              </div>
+            </div>
+  
+              
+            <div class="col-xs-10 input-group">
+              <div class="form-group ">
+              <label class="col-xs-2 control-label">Raza:</label>
+              <div class="col-xs-10">
+                <input type="text" id="raza" name="raza"  class="form-control input-xs" required>
+              </div>
+              </div>
+
+              <div class="form-group ">
+              <label class="col-xs-2 control-label">Edad:</label>
+              <div class="col-xs-10">
+                <input type="text" id="edad" name="edad"  class="form-control input-xs" required>
+              </div>
+              </div>
+            </div>
+
+  
+          <div class="modal-footer">
+            <input type="submit" class="btn btn-secondary" value="Enviar" onclick="registrar()">
+          </div>
+          
+          <div id="alertSI" class="alert alert-success alert-dismissible fade show" role="alert"> ¡Registrado correctamente!</div>
+          <div id="alertNO" class="alert alert-danger" role="alert">Complete los datos</div>
+  
+      </form>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!--script  src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+
+<script src="js/Animate.js"></script>
+<script src="js/funciones.js"></script>
+
+</body>
+</html>
